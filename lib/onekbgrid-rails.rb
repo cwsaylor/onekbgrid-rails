@@ -1,6 +1,6 @@
 module Onekbgrid
   module Rails
-    require 'onekbrails-rails/rails/engine'
-    require 'onekbrails-rails/version'
+    require 'onekbgrid/rails/engine'
+    require 'onekbgrid/version'
   end
 end

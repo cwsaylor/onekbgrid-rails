@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "onekbgrid-rails/version"
+require "onekbgrid/version"
 
 Gem::Specification.new do |s|
   s.name        = "onekbgrid-rails"

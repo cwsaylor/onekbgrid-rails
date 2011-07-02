@@ -1,5 +1,5 @@
 module Onekbgrid
   module Rails
-    # Your code goes here...
+    require 'onekbrails-rails/engine'
   end
 end

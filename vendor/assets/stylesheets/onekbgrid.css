@@ -1,0 +1,66 @@
+/* Default 960 grid. Can be overridden */
+
+$onekbgrid_cols: 12 !default;
+$onekbgrid_width: 60px !default;
+$onekbgrid_gutter: 20px !default;
+
+/* Standard 1Kb Grid classes */
+
+@for $i from 1 through $onekbgrid_cols  {
+  .grid_#{$i} { width: ($onekbgrid_width * $i) + ($i - 1) * $onekbgrid_gutter}
+}
+
+.column {
+	margin: 0 $onekbgrid_gutter/2;
+	overflow: hidden;
+	float: left;
+	display: inline;
+}
+
+.row {
+	width: ($onekbgrid_width * $onekbgrid_cols) + ($onekbgrid_cols * $onekbgrid_gutter);
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.row .row {
+	margin: 0 -$onekbgrid_gutter/2;
+	width: auto;
+	display: inline-block;
+}
+
+/* Mixins for a semantic grid */
+
+@mixin grid($cols) {
+  width: ($onekbgrid_width * $cols) + ($cols - 1) * $onekbgrid_gutter;
+	margin: 0 $onekbgrid_gutter/2;
+	overflow: hidden;
+	float: left;
+	display: inline;
+}
+
+@mixin custom_grid($width) {
+  width: $width;
+	margin: 0 $onekbgrid_gutter/2;
+	overflow: hidden;
+	float: left;
+	display: inline;
+}
+
+@mixin row {
+	width: ($onekbgrid_width * $onekbgrid_cols) + ($onekbgrid_cols * $onekbgrid_gutter);
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+@mixin custom_row($width) {
+	width: $width;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+@mixin inner_row {
+	margin: 0 -$onekbgrid_gutter/2;
+	width: auto;
+	display: inline-block;
+}

@@ -31,7 +31,7 @@ Add the following to your GemFile:
 
 Update your bundles:
 
-    bundle update
+    bundle install
 
 Then add the following to your application.js manifest in between the html comment delimeters /* */:
 
